@@ -8,7 +8,7 @@ import os
 # =============================
 @st.cache_resource
 def load_model():
-    model_path = os.path.join(os.getcwd(), "Mai94.h5")  # الموديل الجديد
+    model_path = os.path.join(os.getcwd(), "Mai94 (1).keras")  # الموديل الجديد
     return tf.keras.models.load_model(model_path, compile=False)
 
 model = load_model()
@@ -42,4 +42,5 @@ if uploaded_file is not None:
     st.image(image_input, caption="Uploaded MRI Image", use_container_width=True)
     st.success(f" Prediction: {predicted_label}")
     st.info(f" Confidence: {confidence:.2f}%")
+
 
